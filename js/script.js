@@ -11,7 +11,7 @@ let heightInBlocks = height / blockSize;
 let score = 0;
 
 let drawBorder = function () {
-  ctx.fillStyle = 'Black';
+  ctx.fillStyle = 'White';
   ctx.fillRect(0, 0, width, blockSize);
   ctx.fillRect(0, height - blockSize, width, blockSize);
   ctx.fillRect(0, 0, blockSize, height);
@@ -19,8 +19,8 @@ let drawBorder = function () {
 };
 
 let drawScore = function () {
-  ctx.font = '15px Courier';
-  ctx.fillStyle = 'Black';
+  ctx.font = '15px Montserrat';
+  ctx.fillStyle = 'White';
   ctx.textAlign = 'left';
   ctx.textBaseline = 'top';
   ctx.fillText('Счёт: ' + score, blockSize + 20, blockSize + 20);
@@ -28,8 +28,8 @@ let drawScore = function () {
 
 let gameOver = function () {
   clearInterval(intervalId);
-  ctx.font = '50px Courier';
-  ctx.fillStyle = 'Black';
+  ctx.font = '50px Montserrat';
+  ctx.fillStyle = 'White';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
   ctx.fillText('Конец игры', width / 2, height / 2);
@@ -168,11 +168,11 @@ let apple = new Apple();
 
 let intervalId = setInterval(function () {
   ctx.clearRect(0, 0, width, height);
-  drawScore();
   snake.move();
   snake.draw();
   apple.draw();
   drawBorder();
+  drawScore();
 }, 100);
 
 let directions = {
