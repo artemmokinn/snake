@@ -19,7 +19,7 @@ let drawBorder = function () {
 };
 
 let drawScore = function () {
-  ctx.font = '15px Montserrat';
+  ctx.font = '15px Arial';
   ctx.fillStyle = 'White';
   ctx.textAlign = 'left';
   ctx.textBaseline = 'top';
@@ -28,7 +28,7 @@ let drawScore = function () {
 
 let gameOver = function () {
   clearInterval(intervalId);
-  ctx.font = '50px Montserrat';
+  ctx.font = '50px Arial';
   ctx.fillStyle = 'White';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
