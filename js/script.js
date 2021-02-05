@@ -4,7 +4,7 @@ let ctx = canvas.getContext('2d');
 let width = canvas.width;
 let height = canvas.height;
 
-let blockSize = 5;
+let blockSize = 10;
 let widthInBlocks = width / blockSize;
 let heightInBlocks = height / blockSize;
 
